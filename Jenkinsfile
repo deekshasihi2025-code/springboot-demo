@@ -15,7 +15,10 @@ pipeline {
 
         stage('Build') {
             steps {
+                sh 'which java'
+                sh 'which javac'
                 sh 'java -version'
+                sh 'javac -version'
                 sh 'mvn -version'
                 sh 'mvn clean package -DskipTests'
             }
