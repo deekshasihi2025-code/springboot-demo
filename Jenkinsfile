@@ -17,6 +17,7 @@ pipeline {
             steps {
                 sh 'which java'
                 sh 'which javac'
+                sh 'echo $JAVA_HOME'
                 sh 'java -version'
                 sh 'javac -version'
                 sh 'mvn -version'
